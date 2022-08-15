@@ -17,7 +17,7 @@ export const SidebarData = [
     },
     {
         title: 'Court',
-        path:'/',
+        path:'/court',
         icon: <GiIcons.GiTennisCourt/>,
         cName: 'nav-text'
     },

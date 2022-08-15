@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
-import NavBar from "./Navbar";
+import NavBar from "./Navbar/navbar";
 
 
 const Wrapper = ({children}) =>{
