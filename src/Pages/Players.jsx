@@ -1,11 +1,14 @@
 
 import { useContext } from "react";
 import PlayerTable from "../Components/Tables/Players/PlayerTable";
-import { PlayersSingleton } from "../Services/PlayersServices";
+
+import useHookContext from "../Components/Hooks/useHookContext";
 
 const Players = () =>{
 
-    let players = useContext(PlayersSingleton);
+    const players = useHookContext();
+
+    console.log(players)
 
     return(
         <>

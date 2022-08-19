@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import Players from "./Pages/Players";
 import Wrapper from "./Components/wrapper";
 import Prueba from "./Components/Form/Prueba";
-import PlayersServices from "./Services/PlayersServices";
+import CheckboxServices from "./Services/Chechkbox/CheckboxServices";
 
 
 const App = () => {
@@ -17,9 +17,9 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/players" element={
-                    <PlayersServices>
-                        <Players/>
-                    </PlayersServices>
+                    <CheckboxServices>
+                            <Players/>
+                    </CheckboxServices>
                 }/>
                 <Route path="/court" element={<Prueba/>}/>
             </Routes>

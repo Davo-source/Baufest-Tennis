@@ -1,15 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Form } from "react-bootstrap";
+import { CheckboxSingleton } from "../../Services/Chechkbox/CheckboxServices";
 
 const Checkbox = (props) => {
 
-    const [checked, setChecked] = useState(true);
-
-    const handleChange = () => {
-        setChecked(!checked);
-        console.log(checked);
-        console.log(props.id)
-    }
+    const [checked, handleChange] = useContext(CheckboxSingleton); 
 
     return (
         <>

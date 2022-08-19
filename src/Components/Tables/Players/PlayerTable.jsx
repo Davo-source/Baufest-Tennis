@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Table } from "react-bootstrap";
 import Actions from "../../Dropdowns/Actions";
 import ModalComponent from "../../Modal/ModalComponent";
-import { singleTon } from "../../../Services/ModalServices";
+import { singleTon } from "../../../Services/ModalServices/ModalServices";
 import PlayerMap from "./PlayersMap";
 
 const PlayerTable = ({players})=>{
