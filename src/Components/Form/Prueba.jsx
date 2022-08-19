@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react"
 import { Button, Form } from "react-bootstrap"
+import Checkbox from "./CheckBox";
 
 const Prueba = () =>
 {   
@@ -38,6 +39,7 @@ const Prueba = () =>
             onChange={ (e) => handleChange(property,e.target.value) } />
         </Form>
         <Button type="submit" onClick={(e)=> handleSubmit(e, formRef.current)}>Press to see</Button>
+        <Checkbox/>
         </>
     )
 }

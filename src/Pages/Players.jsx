@@ -1,24 +1,12 @@
-import PlayerTable from "../Components/Tables/Players/PlayerTable";
 
-let players = [
-    {
-        id: 1,
-        name:"Roberto Carlos",
-        points: 12
-    },
-    {
-        id: 2,
-        name:"Maria Jose",
-        points: 20
-    },
-    {
-        id: 3,
-        name:"Paco Enchiladas",
-        points: 7
-    }
-];
+import { useContext } from "react";
+import PlayerTable from "../Components/Tables/Players/PlayerTable";
+import { PlayersSingleton } from "../Services/PlayersServices";
 
 const Players = () =>{
+
+    let players = useContext(PlayersSingleton);
+
     return(
         <>
         <h1>Players's Page</h1>

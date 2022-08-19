@@ -1,7 +1,8 @@
-import React, { useState, useContext } from "react";
-import { Table, Button } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Table } from "react-bootstrap";
+import Actions from "../../Dropdowns/Actions";
 import ModalComponent from "../../Modal/ModalComponent";
-import { singleTon } from "../../Services/ModalServices";
+import { singleTon } from "../../../Services/ModalServices";
 import PlayerMap from "./PlayersMap";
 
 const PlayerTable = ({players})=>{
@@ -9,7 +10,9 @@ const PlayerTable = ({players})=>{
     const [show, setShow, ModalFunctions, handleClose] = useContext(singleTon);
 
     return(
-        <>        
+        <> 
+        <Actions 
+        handleClose={handleClose} />   
 <Table>
     <thead>
         <tr>
@@ -22,7 +25,7 @@ const PlayerTable = ({players})=>{
         <PlayerMap players={players}/>
     </tbody>
 </Table>
-<Button variant="primary" onClick={handleClose}> Create</Button>
+
 <ModalComponent 
 show={show}
 ModalFunctions={ModalFunctions.savePlayer}
